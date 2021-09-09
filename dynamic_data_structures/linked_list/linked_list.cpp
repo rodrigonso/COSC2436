@@ -28,13 +28,10 @@ Node *LinkedList::insertAtIdx(int data, int idx = 0)
     Node *tmp = new Node();
     tmp->data = data;
 
-    int counter = 0;
     Node *curr = head;
-
-    while (counter < idx)
+    for (int i = 1; i < idx - 1; i++)
     {
         curr = curr->next;
-        counter++;
     }
 
     Node *old = curr->next;

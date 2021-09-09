@@ -14,7 +14,7 @@ int main()
     list.insertAtBeg(50);
 
     list.print();
-    Node *testTwo = list.insertAtIdx(100, 0);
+    Node *testTwo = list.insertAtIdx(100, 4);
     cout << endl;
     list.print();
     cout << endl;
