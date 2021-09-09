@@ -65,6 +65,9 @@ Node *LinkedList::insertAtEnd(int data)
 
 void LinkedList::removeNode(Node *node)
 {
+    // This method can handle the cases where you want to remove a node
+    // at beg, end, or any position -- by simply passing the desired to
+    // this method.
 
     if (head == nullptr)
     {
@@ -87,7 +90,12 @@ void LinkedList::print()
     Node *itr = head;
     while (itr != 0)
     {
-        cout << itr->data << endl;
+        cout << itr->data;
+        if (itr->next != 0)
+        {
+            cout << "->";
+        }
         itr = itr->next;
     }
+    cout << '\n';
 }

@@ -6,23 +6,19 @@ using namespace std;
 int main()
 {
     LinkedList list;
+    // Insert Operations
+    list.insertAtBeg(1);
+    list.insertAtBeg(2);
+    list.insertAtBeg(3);
+    list.print();
 
-    list.insertAtBeg(10);
-    list.insertAtBeg(20);
-    list.insertAtBeg(30);
-    list.insertAtBeg(40);
-    list.insertAtBeg(50);
+    Node *itemA = list.insertAtIdx(100, 4);
+    Node *itemB = list.insertAtEnd(200);
+    list.print();
 
-    list.print();
-    Node *testTwo = list.insertAtIdx(100, 4);
-    cout << endl;
-    list.print();
-    cout << endl;
-    Node *test = list.insertAtEnd(200);
-    list.print();
-    cout << endl;
-    list.removeNode(test);
-    list.removeNode(testTwo);
+    // Remove operations
+    list.removeNode(itemA);
+    list.removeNode(itemB);
     list.print();
 
     return 0;
