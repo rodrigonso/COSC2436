@@ -1,6 +1,8 @@
 #include <iostream>
+#include "ArgumentManager.h"
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include "linked_list.h"
 
 using namespace std;
@@ -8,17 +10,15 @@ using namespace std;
 LinkedList parseInput(ifstream &file);
 void writeOutput(ofstream &file, LinkedList &list);
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 
-    // ArgumentManager am(argc, argv);
+    ArgumentManager am(argc, argv);
     ifstream input;
     ofstream output;
 
-    // string inFileName = am.get("input");
-    // string outFileName = am.get("output");
-    string inFileName = "input1.txt";
-    string outFileName = "output2.txt";
+    string inFileName = am.get("input");
+    string outFileName = am.get("output");
 
     input.open(inFileName);
     output.open(outFileName);
@@ -26,9 +26,8 @@ int main(int argc, char const *argv[])
     try
     {
         LinkedList list = parseInput(input);
-        list.print();
+        // list.print();
         list.sort();
-        list.print();
         writeOutput(output, list);
     }
     catch (invalid_argument ex)
@@ -62,7 +61,7 @@ LinkedList parseInput(ifstream &file)
         getline(stringStream, name, ',');
         getline(stringStream, score, ',');
 
-        res.add(name, stoi(score));
+        res.add(name, score);
         isValid = true;
     }
 

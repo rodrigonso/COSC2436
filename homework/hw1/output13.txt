@@ -1,0 +1,2 @@
+{genre:fiction,title:Oliver.Twist,author:Charles.Dickens,year:1838}
+{genre:child.literature,title:the.cat.in.the.hat,author:Dr.Seuss,year:1957}

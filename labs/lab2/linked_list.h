@@ -20,9 +20,10 @@ private:
 public:
     LinkedList();
     void sort();
-    void add(string name, int score);
+    void add(string name, string score);
     void print();
-    string trim(string str);
+    string formatName(string str);
+    int formatScore(string str);
     Node *getHead()
     {
         return head;
@@ -35,7 +36,7 @@ LinkedList::LinkedList()
     length = 0;
 }
 
-string LinkedList::trim(string str)
+string LinkedList::formatName(string str)
 {
     size_t first = str.find_first_not_of(' ');
     if (string::npos == first)
@@ -44,6 +45,17 @@ string LinkedList::trim(string str)
     }
     size_t last = str.find_last_not_of(' ');
     return str.substr(first, (last - first + 1));
+}
+
+int LinkedList::formatScore(string str)
+{
+    int count = 0;
+
+    for (int i = 0; str[i]; i++)
+        if (str[i] != ' ')
+            str[count++] = str[i];
+    str[count] = '\0';
+    return stoi(str);
 }
 
 void LinkedList::swap(Node *node1, Node *node2)
@@ -56,12 +68,12 @@ void LinkedList::swap(Node *node1, Node *node2)
     node2->name = tempName;
 }
 
-void LinkedList::add(string name, int score)
+void LinkedList::add(string name, string score)
 {
     Node *tmp = new Node();
 
-    tmp->name = trim(name);
-    tmp->score = score;
+    tmp->name = formatName(name);
+    tmp->score = formatScore(score);
     tmp->next = 0;
 
     length++;

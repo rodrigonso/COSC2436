@@ -1,0 +1,10 @@
+--- ans2.txt	2021-08-26 11:49:26.000000000 -0500
++++ output2.txt	2021-10-03 16:57:38.000000000 -0500
+@@ -2,5 +2,5 @@
+ acb
+ bac
+ bca
+-cab
+ cba
+\ No newline at end of file
++cab

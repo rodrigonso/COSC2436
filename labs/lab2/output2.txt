@@ -1,1 +1,2 @@
-No valid data in input
+Zoe,15
+Richard,10

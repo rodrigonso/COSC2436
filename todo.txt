@@ -1,0 +1,7 @@
+1. Implement infix-postfix of expression [DONE]
+2. Implement postfix evaluation
+3. Implememt postfix-infix of expression [DONE]
+4. Implement a stack with arrays [DONE]
+5. Implement a stack with linked lists [DONE]
+6. Implement a queue with arrays [DONE]
+7. Implement a queue with linked lists [DONE]

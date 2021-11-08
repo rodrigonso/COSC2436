@@ -1,0 +1,3 @@
+{genre:fantasy,title:Harry.Potter,author:J.K.Rowling,year:1997}
+{genre:fantasy,title:The.Lord.Of.The.Rings,author:J.R.R.Tolkien,year:1954}
+{genre:fantasy,title:The.Way.Of.Kings,author:Brandon.Sanderson,year:2010}

@@ -1,0 +1,5 @@
+--- ans13.txt	2021-01-18 07:15:46.000000000 -0600
++++ output13.txt	2021-10-03 17:01:44.000000000 -0500
+@@ -0,0 +1,2 @@
++{genre:fiction,title:Oliver.Twist,author:Charles.Dickens,year:1838}
++{genre:child.literature,title:the.cat.in.the.hat,author:Dr.Seuss,year:1957}

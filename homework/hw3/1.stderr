@@ -1,1 +1,1 @@
-./test3.sh: line 68: timeout: command not found
+test3.sh: line 68: timeout: command not found

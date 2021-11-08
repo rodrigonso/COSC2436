@@ -110,11 +110,18 @@ public:
     void addAtIdx(int idx, string data)
     {
 
-        if (contains(data))
+        if (contains(data) || idx > length)
             return;
 
         Node *tmp = new Node();
         tmp->data = data;
+
+        if (idx == 0)
+        {
+            tmp->next = head;
+            head = tmp;
+            return;
+        }
 
         Node *curr = head;
         for (int i = 1; i < idx - 1; i++)
@@ -140,10 +147,12 @@ public:
 
         while (dummy->next != 0)
         {
+            cout << dummy->data << endl;
             Node *right = dummy->next;
             if (right->data.find(str) != string::npos)
             {
                 dummy->next = right->next;
+                continue;
             }
             dummy = dummy->next;
         }

@@ -1,0 +1,8 @@
+REPLACE:[#,s](2)
+DECODE:[?vi#zmf##agfzva#zbffnz4fco4f4](1)
+REPLACE:[f,e](5)
+REPLACE:[?,t](1)
+PRINT:(7)
+REPLACE:[z, ](4)
+REPLACE:[4,d](6)
+REPLACE:[v,h](3)

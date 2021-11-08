@@ -25,9 +25,6 @@ int main(int argc, char *argv[])
     output.open(outputFile);
     parseInput(input, list);
     parseCommands(command, output, list, stack);
-    output.close();
-    input.close();
-    command.close();
     return 0;
 }
 
