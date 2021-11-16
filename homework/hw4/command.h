@@ -1,5 +1,7 @@
 #include <iostream>
 #include <queue>
+#include <algorithm>
+#include <climits>
 using namespace std;
 
 class command
@@ -47,12 +49,9 @@ command::command(string d)
         {
             arg1 = string(args.begin(), args.begin() + commaIdx)[0];
             arg2 = args.substr(commaIdx + 1)[0];
-            // arg1 = strcpy(new char[a1.length() + 1], a1.c_str());
-            // arg2 = strcpy(new char[a2.length() + 1], a2.c_str());
         }
         else
         {
-            // arg1 = strcpy(new char[a1.length() + 1], args.c_str());
             if (title == "DECODE")
                 message = args;
             else

@@ -1,5 +1,6 @@
 #include "command.h"
 #include <iostream>
+#include <climits>
 using namespace std;
 
 struct node
